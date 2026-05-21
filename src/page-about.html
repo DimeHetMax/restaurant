@@ -16,22 +16,62 @@
   <body>
     <load src="./partials/header.html" highlight-about="active" />
 
-    <main>
-      <div class="container">
-        <div class="about-button-wrapper">
-        <load src="./partials/back-link.html"/>
+    <main class="content-page">
+      <section class="content-page-section">
+        <div class="container">
+          <div class="content-page-back">
+            <load src="./partials/back-link.html" />
+          </div>
+
+          <div class="content-page-grid">
+            <div class="content-page-copy">
+              <h1 class="home-titel_h1 home-title_left">About Us</h1>
+              <p class="home_text home-text_left">
+                Oro Noir is a family business which only uses the freshest
+                ingredients. We aim to provide a dining experience with big
+                flavours and a good atmosphere.
+              </p>
+              <p class="home_text home-text_left">
+                Every service is shaped by our belief that dining should feel
+                personal, relaxed, and carefully considered. From the first
+                welcome to the final course, our team focuses on warm
+                hospitality, elegant presentation, and food that brings people
+                together around the table.
+              </p>
+              <h2 class="home-titel_h2 home-title_left">Our History</h2>
+              <p class="home_text home-text_left">
+                The restaurant opened in 1990 as a small family dining room
+                built around generous hospitality and honest cooking. Over the
+                years, Oro Noir has grown into a place where guests come for
+                carefully prepared dishes, thoughtful service, and an atmosphere
+                that feels both elegant and welcoming.
+              </p>
+              <p class="home_text home-text_left">
+                Our menu has changed with the seasons, but our standards have
+                stayed the same: fresh ingredients, balanced flavours, and care
+                in every detail. Many of our guests have celebrated birthdays,
+                anniversaries, and quiet evenings here, making the restaurant a
+                part of their own stories too.
+              </p>
+            </div>
+
+            <div class="container-box content-page-image-box">
+              <span class="box top-right"></span>
+              <span class="box bottom-left"></span>
+              <div class="hero-home-img-wrapper">
+                <img
+                  class="hero-home-img"
+                  src="img/about/about1.jpg"
+                  alt="restaurant dining room"
+                />
+              </div>
+            </div>
+          </div>
         </div>
-       
-         <h2>About Us</h2>
- <p>Oro Noir is a family business which only uses the freshest ingredients. We aim to provide a dining experience with big flavours and a good atmosphere.</p>
- <div class="home-img-wrapper">
- <img class="home-img" src="img/about/about1.jpg">
- </div>
- <h2>Our History</h2>
- <p>The restaurant opened in 1990 and has been making our customers happy every day.</p> 
-      </div>
+      </section>
     </main>
 
     <load src="./partials/footer.html" />
+    <script type="module" src="./main.js"></script>
   </body>
 </html>

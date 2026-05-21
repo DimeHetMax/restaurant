@@ -16,68 +16,114 @@
   <body>
     <load src="./partials/header.html" highlight-reservation="active" />
 
-    <div id="meta_container">
-          
-        <h1>book a table</h1>
+    <main class="reservation-page">
+      <div class="container reservation-page-container">
+        <div class="content-page-back reservation-page-back">
+          <load src="./partials/back-link.html" />
+        </div>
+        <div id="meta_container" class="reservation-card">
+          <div class="reservation-card-header">
+            <p class="reservation-eyebrow">Reservations</p>
+            <h1 class="home-titel_h1">Book a table</h1>
+            <p class="home_text">
+              Choose your preferred date and leave your details. We will confirm
+              your booking shortly.
+            </p>
+          </div>
 
+          <form id="reservation_form" class="reservation-form">
+            <fieldset class="reservation-fieldset">
+              <legend class="home-titel_h3">Booking info</legend>
 
-    <form id="reservation_form">             
-           <h2>booking info</h2>
+              <div id="booking_info" class="reservation-grid reservation-grid-3">
+                <div class="input_group">
+                  <label for="people">Guests</label>
+                  <input
+                    id="people"
+                    type="number"
+                    min="1"
+                    max="12"
+                    placeholder="2"
+                  />
+                </div>
 
-<div id="booking_info">
+                <div class="input_group">
+                  <label for="date">Date</label>
+                  <input id="date" type="date" />
+                </div>
 
-    <div class="input_group">
-        <label for="people">no of people</label>
-        <input id="people" type="number">
-    </div>
+                <div class="input_group">
+                  <label for="time">Time</label>
+                  <input id="time" type="time" />
+                </div>
+              </div>
+            </fieldset>
 
-    <div class="input_group">
-        <label for="date">date</label>
-        <input id="date" type="date">
-    </div>
+            <fieldset class="reservation-fieldset">
+              <legend class="home-titel_h3">Personal info</legend>
 
-    <div class="input_group">
-        <label for="time">time</label>
-        <input id="time" type="time">
-    </div>
+              <div id="personal_info" class="reservation-grid">
+                <div class="input_group input_group-wide">
+                  <label for="fullname">Full name</label>
+                  <input
+                    id="fullname"
+                    type="text"
+                    placeholder="Your name"
+                    autocomplete="name"
+                  />
+                </div>
 
-</div>
+                <div class="input_group">
+                  <label for="email">Email</label>
+                  <input
+                    id="email"
+                    type="email"
+                    placeholder="name@example.com"
+                    autocomplete="email"
+                  />
+                </div>
 
+                <div class="input_group">
+                  <label for="phone">Phone number</label>
+                  <input
+                    id="phone"
+                    type="tel"
+                    placeholder="+44 1234 567890"
+                    autocomplete="tel"
+                  />
+                </div>
+              </div>
+            </fieldset>
 
-<h2>personal info</h2>
+            <div class="reservation-actions">
+              <button class="button" type="submit">Book now</button>
+              <p id="error_message" aria-live="polite"></p>
+            </div>
+          </form>
+        </div>
+      </div>
 
-<div id="personal_info">
-
-    <div class="input_group">
-        <label for="fullname">full name</label>
-        <input id="fullname" type="text">
-    </div>
-
-    <div class="input_group">
-        <label for="email">email</label>
-        <input id="email" type="email">
-    </div>
-
-    <div class="input_group">
-        <label for="phone">phone number</label>
-        <input id="phone" type="tel">
-    </div>
-
-</div>
-
-           <button type="submit">book now</button>
-            <p id="error_message"></p>
-        </form>
-
-
-    </div>
-
-
-
-
-<script src="main.js" type="module"></script>
-
+      <div
+        class="reservation-modal"
+        id="reservation_success_modal"
+        aria-hidden="true"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="reservation_success_title"
+      >
+        <div class="reservation-modal-content">
+          <p class="reservation-eyebrow">Reservation</p>
+          <h2 class="home-titel_h2" id="reservation_success_title">
+            Reservation successful
+          </h2>
+          <p class="home_text">
+            We will contact you through your email and mobile phone to confirm.
+          </p>
+        </div>
+      </div>
+    </main>
 
     <load src="./partials/footer.html" />
+    <script type="module" src="./main.js"></script>
   </body>
 </html>

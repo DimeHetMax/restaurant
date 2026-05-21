@@ -1,158 +1,114 @@
-/* ===== BASE STYLES ===== */
-/* 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-} */
-
-.gallery-page {
-  font-family: "Cormorant Upright", serif; 
-     color: white;
-    background-image: url("../img/images/bg_image.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    
-    min-height: 100vh;
-     display: flex;
-     flex-direction: column;
-    /* justify-content: center; */
-    align-items: center;
-
-    padding: 1rem;
-    text-align: center;
+.gallery-page,
+.gallery-page-main {
+  background: var(--color-bg);
 }
 
-/* Optional reusable colors */
-:root {
-    --main-text: #DCCA87;
-    --secondary-text: #ffffff;
-    --accent-text: #5F5F5F;
-    --input-container: #F4E7B5;
-    --meta_container: #0C0B08;
+.gallery-page-hero {
+  padding: 48px 0 16px;
 }
 
-.gallery-page h1{
-     font-size: 64px;
-  font-weight: bold;
-  margin-bottom: 15px;
-   font-family: "Cormorant Upright", serif;
-    color: var(--main-text);
-
+.gallery-page-section {
+  padding: 48px 0;
 }
 
-
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.gallery-section {
-  padding: 40px 20px;
-  
-}
-
-.grid-container {
-  max-width: 1200px;
-  margin: auto;
-
+.gallery-page-content {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 120px;
-
-  /* Center items inside columns */
+  gap: 24px;
   justify-items: center;
-  align-items: center;
+  text-align: center;
 }
 
-/* General block styling */
-.block {
-  width: 100%;
-  max-width: 372px;
+.gallery-page-content .home_text {
+  max-width: 640px;
+  text-align: center;
 }
 
-/* Images */
-.block img {
+.gallery-page-list-wrap {
   width: 100%;
+}
+
+.gallery-page-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  gap: 20px;
+}
+
+.gallery-page-item {
   display: block;
+  aspect-ratio: 1 / 1.25;
+  overflow: hidden;
+}
+
+.gallery-page-item img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
-
-
-
-/* First square image */
-.image-square img {
-  aspect-ratio: 1 / 1;
-  max-width: 360px;
+.gallery-page-item:nth-child(n + 3) {
+  display: none;
 }
 
-/* Rectangle images */
-.image-rect img {
-  aspect-ratio: 372 / 200;
-}
-
-/* Text block */
-.text-block {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 20px;
-}
-
-.text-block h2 {
-  font-size: 45px;
-  font-weight: bold;
-  margin-bottom: 15px;
-   font-family: "Cormorant Upright", serif;
-    color: var(--main-text);
-
-}
-
-
-
-.text-block p {
-  line-height: 1.6;
-   font-family: "Cormorant Upright", serif;
-    font-size: 24px;
-    color: white;
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .grid-container {
-    grid-template-columns: 1fr;
-    gap: 40px;
+@media only screen and (min-width: 768px) {
+  .gallery-page-hero {
+    padding-top: 64px;
   }
 
-  .block {
-    max-width: 100%;
+  .gallery-page-content {
+    grid-template-columns: minmax(220px, 35%) minmax(0, 1fr);
+    align-items: center;
+    column-gap: 40px;
+    justify-items: start;
+    text-align: left;
   }
 
-  .image-square img {
-    max-width: 100%;
+  .gallery-page-content > h3,
+  .gallery-page-content > h2,
+  .gallery-page-content > p {
+    grid-column: 1;
+  }
+
+  .gallery-page-content > p {
+    text-align: left;
+  }
+
+  .gallery-page-content > svg {
+    grid-column: 1;
+  }
+
+  .gallery-page-list-wrap {
+    grid-column: 2;
+    grid-row: 1 / span 5;
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+
+  .gallery-page-list {
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(190px, 260px);
+    grid-template-columns: none;
+    width: max-content;
+  }
+
+  .gallery-page-item,
+  .gallery-page-item:nth-child(n + 3) {
+    display: block;
   }
 }
 
+@media only screen and (min-width: 1200px) {
+  .gallery-page-section {
+    padding: 64px 0;
+  }
 
-@media (min-width: 1768px) {
+  .gallery-page-content {
+    grid-template-columns: minmax(320px, 34%) minmax(0, 1fr);
+    column-gap: 64px;
+  }
 
-
-.grid-container {
-  max-width: 1200px;
-  margin: auto;
-
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 120px;
-
-  /* Center items inside columns */
-  justify-items: center;
-  align-items: center;
-}  
-
+  .gallery-page-list {
+    grid-auto-columns: minmax(240px, 300px);
+    gap: 24px;
+  }
 }
-
