@@ -5,13 +5,13 @@ const prefersReducedMotion = window.matchMedia(
 
 if (heroImage && !prefersReducedMotion) {
   const heroImages = [
-    './img/home/Mask_Group.jpg',
-    './img/home/dish_1.jpg',
-    './img/home/dish_2.jpg',
-    './img/home/dish_3.jpg',
-    './img/home/dish_4.jpg',
-    './img/home/gallery_1.jpg',
-    './img/home/gallery_2.jpg',
+    new URL('../img/home/Mask_Group.jpg', import.meta.url).href,
+    new URL('../img/home/dish_1.jpg', import.meta.url).href,
+    new URL('../img/home/dish_2.jpg', import.meta.url).href,
+    new URL('../img/home/dish_3.jpg', import.meta.url).href,
+    new URL('../img/home/dish_4.jpg', import.meta.url).href,
+    new URL('../img/home/gallery_1.jpg', import.meta.url).href,
+    new URL('../img/home/gallery_2.jpg', import.meta.url).href,
   ];
   const imageChangeDelay = 4200;
   const fadeDuration = 900;
