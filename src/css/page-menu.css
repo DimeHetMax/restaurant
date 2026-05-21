@@ -1,0 +1,11 @@
+
+
+.home-img-wrapper {
+  margin: 0 auto;
+  max-width: 315px;
+}
+
+.menu-button-wrapper {
+    display: flex;
+    justify-content: flex-start;
+}

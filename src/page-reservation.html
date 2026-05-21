@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reservation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <load src="./partials/header.html" highlight-reservation="active" />
+
+    <div id="meta_container">
+          
+        <h1>book a table</h1>
+
+
+    <form id="reservation_form">             
+           <h2>booking info</h2>
+
+<div id="booking_info">
+
+    <div class="input_group">
+        <label for="people">no of people</label>
+        <input id="people" type="number">
+    </div>
+
+    <div class="input_group">
+        <label for="date">date</label>
+        <input id="date" type="date">
+    </div>
+
+    <div class="input_group">
+        <label for="time">time</label>
+        <input id="time" type="time">
+    </div>
+
+</div>
+
+
+<h2>personal info</h2>
+
+<div id="personal_info">
+
+    <div class="input_group">
+        <label for="fullname">full name</label>
+        <input id="fullname" type="text">
+    </div>
+
+    <div class="input_group">
+        <label for="email">email</label>
+        <input id="email" type="email">
+    </div>
+
+    <div class="input_group">
+        <label for="phone">phone number</label>
+        <input id="phone" type="tel">
+    </div>
+
+</div>
+
+           <button type="submit">book now</button>
+            <p id="error_message"></p>
+        </form>
+
+
+    </div>
+
+
+
+
+<script src="main.js" type="module"></script>
+
+
+    <load src="./partials/footer.html" />
+  </body>
+</html>

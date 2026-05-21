@@ -1,0 +1,23 @@
+/**
+  |============================
+  | include css partials with
+  | default @import url()
+  |============================
+*/
+/* Common styles */
+@import url('./reset.css');
+@import url('./base.css');
+@import url('./container.css');
+
+/* Sections style */
+@import url('./header.css');
+@import url('./back-link.css');
+@import url('./footer.css');
+
+/* Pages */
+@import url('./home-page.css');
+@import url('./page-about.css');
+@import url('./page-contacts.css');
+@import url('./page-gallery.css');
+@import url('./page-menu.css');
+@import url('./page-reservation.css');
