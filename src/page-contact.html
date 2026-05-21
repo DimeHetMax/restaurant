@@ -16,15 +16,68 @@
   <body>
     <load src="./partials/header.html" highlight-contact="active" />
 
-    <main>
-      <div class="container">
-        <h1 class="main-title">
-          <span class="main-title-gradient">Welcome</span> Contact
-        </h1>
-        <load src="./partials/back-link.html" />
-      </div>
+    <main class="content-page">
+      <section class="content-page-section">
+        <div class="container">
+          <div class="content-page-back">
+            <load src="./partials/back-link.html" />
+          </div>
+
+          <div class="contact-page">
+            <div class="contact-page-intro">
+              <h1 class="home-titel_h1">Contact</h1>
+              <p class="home_text">
+                We are here to help with reservations, private dining requests,
+                menu questions, and special occasions. Reach out before your
+                visit and our team will make sure every detail is prepared.
+              </p>
+              <a class="button content-page-link" href="./page-reservation.html"
+                >Book Now</a
+              >
+            </div>
+
+            <div class="contact-page-grid">
+              <div class="contact-page-card">
+                <h2 class="home-titel_h3">Find Us</h2>
+                <p class="home_text">
+                  Lane Ends Bungalow<br />
+                  Whatcroft Hall Lane<br />
+                  Rudheath, CW9 7SG
+                </p>
+              </div>
+
+              <div class="contact-page-card">
+                <h2 class="home-titel_h3">Opening Hours</h2>
+                <p class="home_text">
+                  Mon - Fri: 10:00 am - 02:00 am<br />
+                  Sat - Sun: 10:00 am - 03:00 am
+                </p>
+              </div>
+
+              <div class="contact-page-card">
+                <h2 class="home-titel_h3">Reservations</h2>
+                <p class="home_text">
+                  For tables of up to 12 guests, use our reservation page. For
+                  larger parties, celebrations, or private dining, contact us in
+                  advance so we can arrange the best seating.
+                </p>
+              </div>
+
+              <div class="contact-page-card">
+                <h2 class="home-titel_h3">Guest Notes</h2>
+                <p class="home_text">
+                  Please tell us about allergies, dietary requirements, or
+                  accessibility needs when booking. We will do our best to make
+                  your visit comfortable and relaxed.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <load src="./partials/footer.html" />
+    <script type="module" src="./main.js"></script>
   </body>
 </html>

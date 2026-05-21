@@ -17,35 +17,74 @@
 <body>
   <load src="./partials/header.html" highlight-menu="active" />
 
-  <main>
-    <div class="container">
-      <div class="menu-button-wrapper">
-        <load src="./partials/back-link.html" />
-      </div>
+  <main class="content-page">
+    <section class="content-page-section">
+      <div class="container">
+        <div class="content-page-back">
+          <load src="./partials/back-link.html" />
+        </div>
 
-      <h2>Specials</h2>
-      <p>Highlands Waygu - £30<br>
-        Cod Supreme - £24<br>
-        Lamb Rack - £20<br>
-        Angus Fillet Steak - £30<br>
-        Cote de Boeuf - £25</p>
-      <div class="home-img-wrapper">
-        <img class="home-img" src="img/menu/menu1.jpg">
+        <div class="content-page-grid">
+          <div class="content-page-copy">
+            <h1 class="home-titel_h1 home-title_left">Specials</h1>
+            <p class="home_text home-text_left">
+              Our specials bring together premium ingredients, careful
+              technique, and generous flavour. Each dish is prepared to feel
+              refined without losing the warmth of a memorable restaurant meal.
+            </p>
+            <p class="home_text home-text_left">
+              Highlands Waygu - £30<br />
+              Cod Supreme - £24<br />
+              Lamb Rack - £20<br />
+              Angus Fillet Steak - £30<br />
+              Cote de Boeuf - £25
+            </p>
+            <h2 class="home-titel_h2 home-title_left">Wine and Beer</h2>
+            <p class="home_text home-text_left">
+              Our drinks list is selected to complement the menu, from rich reds
+              for steaks and lamb to lighter bottles for seafood and relaxed
+              evenings.
+            </p>
+            <p class="home_text home-text_left">
+              Chapel Hill Shiraz - £28<br />
+              Catena Malbec - £29<br />
+              La Vieille Rose - £22<br />
+              Rhino Pale Ale - £15<br />
+              Irish Guinness - £12
+            </p>
+            <h2 class="home-titel_h2 home-title_left">Non-Alcoholic Drinks</h2>
+            <p class="home_text home-text_left">
+              Simple, refreshing classics are available throughout service for
+              guests who prefer a lighter option with their meal.
+            </p>
+            <p class="home_text home-text_left">
+              Coca Cola - £5<br />
+              Diet Coke - £5<br />
+              Sprite - £5
+            </p>
+            <a class="button content-page-link" href="./page-reservation.html"
+              >Book Now</a
+            >
+          </div>
+
+          <div class="container-box content-page-image-box">
+            <span class="box top-right"></span>
+            <span class="box bottom-left"></span>
+            <div class="hero-home-img-wrapper">
+              <img
+                class="hero-home-img"
+                src="img/menu/menu1.jpg"
+                alt="restaurant special dish"
+              />
+            </div>
+          </div>
+        </div>
       </div>
-      <h2>Wine and Beer</h2>
-      <p>Chapel Hill Shiraz - £28<br>
-        Catena Malbec - £29<br>
-        La Vieille Rose - £22<br>
-        Rhino Pale Ale - £15<br>
-        Irish Guinness - £12</p>
-        <h2>Non-Alcoholic Drinks</h2>
-      <p>Coca Cola - £5<br>
-        Diet Coke - £5<br>
-        Sprite - £5<br></p>
-    </div>
+    </section>
   </main>
 
   <load src="./partials/footer.html" />
+  <script type="module" src="./main.js"></script>
 </body>
 
 </html>

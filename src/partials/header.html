@@ -1,10 +1,21 @@
 <header class="header">
   <div class="container">
     <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-       
+      <a class="nav-logo" href="./index.html" aria-label="Oro Noir home">
+        Oro Noir
       </a>
-      <ul class="nav-list">
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+      >
+        <span class="nav-toggle-line"></span>
+        <span class="nav-toggle-line"></span>
+        <span class="nav-toggle-line"></span>
+      </button>
+      <ul class="nav-list" id="primary-navigation">
         <li class="nav-item">
           <a class="nav-link {=$highlight-home}" href="./index.html">Home</a>
         </li>
