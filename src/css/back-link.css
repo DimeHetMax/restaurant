@@ -1,6 +1,24 @@
 .back-link {
+  flex: 0 0 auto;
   min-height: 34px;
   padding: 8px 18px;
   font-size: 14px;
   line-height: 1;
+}
+
+.back-welcome {
+  margin: 0;
+  color: var(--color-gold);
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.1;
+  letter-spacing: 0.04em;
+  text-align: right;
+}
+
+@media only screen and (min-width: 768px) {
+  .back-welcome {
+    font-size: 34px;
+  }
 }

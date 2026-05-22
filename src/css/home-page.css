@@ -511,3 +511,13 @@ body {
     height: min(38vw, 419px);
   }
 }
+
+
+.back-welcome-title {
+  opacity: 1;
+  transition: opacity 500ms ease;
+}
+
+.back-welcome-title.is-changing {
+  opacity: 0;
+}
