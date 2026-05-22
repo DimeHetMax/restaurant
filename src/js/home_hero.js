@@ -1,7 +1,34 @@
 const heroImage = document.querySelector('.hero-home-img-animated');
+const backWelcomeTitle = document.querySelector('.back-welcome');
+
 const prefersReducedMotion = window.matchMedia(
   '(prefers-reduced-motion: reduce)'
 ).matches;
+
+const welcomeGreetings = [
+  'Welcome',
+  'Bienvenido',
+  'Bienvenue',
+  'Willkommen',
+  'Benvenuto',
+  'Bem-vindo',
+  'Welkom',
+  'Witamy',
+  'Ласкаво просимо',
+  'Vítejte',
+  'Vitajte',
+  'Velkommen',
+  'Välkommen',
+  'Tervetuloa',
+  'Tere tulemast',
+  'Laipni lūdzam',
+  'Sveiki atvykę',
+  'Dobrodošli',
+  'Bine ați venit',
+  'Καλώς ήρθατε',
+  'Fáilte',
+  'Croeso',
+];
 
 if (heroImage && !prefersReducedMotion) {
   const heroImages = [
@@ -32,3 +59,24 @@ if (heroImage && !prefersReducedMotion) {
     }, fadeDuration);
   }, imageChangeDelay);
 }
+
+const updateWelcomeWord = arr => {
+  if (!backWelcomeTitle || arr.length === 0) {
+    return;
+  }
+
+  let wordIndex = 0;
+
+  setInterval(() => {
+    wordIndex = (wordIndex + 1) % arr.length;
+    backWelcomeTitle.classList.add('is-changing');
+    setTimeout(() => {
+      backWelcomeTitle.textContent = arr[wordIndex];
+      backWelcomeTitle.classList.remove('is-changing');
+    }, 500);
+  }, 2000);
+};
+if(backWelcomeTitle){
+  updateWelcomeWord(welcomeGreetings);
+}
+
