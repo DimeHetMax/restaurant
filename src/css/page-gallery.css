@@ -35,15 +35,84 @@
 }
 
 .gallery-page-item {
+  position: relative;
   display: block;
   aspect-ratio: 1 / 1.25;
   overflow: hidden;
+  border: var(--border-subtle);
+  border-radius: var(--radius-md);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.28);
+  transition: transform 300ms ease, border-color 300ms ease;
+}
+
+.gallery-page-item::before,
+.gallery-page-item::after {
+  content: '';
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  pointer-events: none;
+}
+
+.gallery-page-item::before {
+  background:
+    linear-gradient(145deg, rgba(255, 240, 188, 0.15), transparent 34%),
+    radial-gradient(circle at center, transparent 42%, rgba(4, 4, 3, 0.62) 100%),
+    linear-gradient(180deg, transparent 58%, rgba(9, 8, 5, 0.46));
+  mix-blend-mode: soft-light;
+  transition: opacity 500ms ease;
+}
+
+.gallery-page-item::after {
+  background:
+    repeating-radial-gradient(
+      circle at 20% 30%,
+      rgba(255, 255, 255, 0.08) 0 0.6px,
+      transparent 0.7px 3px
+    ),
+    linear-gradient(
+      115deg,
+      transparent 20%,
+      rgba(255, 245, 207, 0.16) 42%,
+      transparent 58%
+    );
+  background-size: 5px 5px, 220% 100%;
+  background-position: center, 110% 0;
+  opacity: 0.32;
+  transition:
+    opacity 500ms ease,
+    background-position 900ms cubic-bezier(0.2, 0.75, 0.25, 1);
+}
+
+.gallery-page-item:hover {
+  transform: translateY(-8px);
+  border-color: rgba(220, 202, 135, 0.55);
 }
 
 .gallery-page-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transform: scale(1.025);
+  filter: saturate(0.82) contrast(1.12) brightness(0.88) sepia(0.1)
+    blur(0.35px);
+  transition:
+    transform 900ms cubic-bezier(0.2, 0.75, 0.25, 1),
+    filter 600ms ease;
+}
+
+.gallery-page-item:hover img {
+  transform: scale(1.085);
+  filter: saturate(1.05) contrast(1.08) brightness(0.98) sepia(0);
+}
+
+.gallery-page-item:hover::before {
+  opacity: 0.65;
+}
+
+.gallery-page-item:hover::after {
+  background-position: center, -110% 0;
+  opacity: 0.48;
 }
 
 .gallery-page-item:nth-child(n + 3) {

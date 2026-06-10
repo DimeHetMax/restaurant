@@ -24,8 +24,10 @@
   display: grid;
   gap: 20px;
   padding: 20px;
-  background: rgba(12, 11, 8, 0.82);
-  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+  border: var(--border-subtle);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(145deg, rgba(29, 27, 20, 0.96), rgba(12, 11, 8, 0.9));
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.42);
 }
 
 .reservation-card::before,
@@ -147,7 +149,8 @@
   min-height: 40px;
   padding: 8px 12px;
   border: 0;
-  border-bottom: 1px solid transparent;
+  border: 1px solid rgba(220, 202, 135, 0.14);
+  border-radius: var(--radius-sm);
   background-color: rgba(255, 255, 255, 0.06);
   color: var(--color-text-light);
   font-family: var(--second-family);
@@ -165,7 +168,8 @@
 .reservation-form input:focus {
   background-color: rgba(255, 255, 255, 0.1);
   outline: 0;
-  box-shadow: 0 0 0 2px rgba(220, 202, 135, 0.14);
+  border-color: rgba(220, 202, 135, 0.55);
+  box-shadow: 0 0 0 3px rgba(220, 202, 135, 0.1);
 }
 
 .reservation-form input::-webkit-calendar-picker-indicator {

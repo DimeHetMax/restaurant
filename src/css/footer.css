@@ -2,7 +2,9 @@
 .footer {
   position: relative;
   padding: 20px 0 14px;
-  background: var(--color-bg);
+  background:
+    linear-gradient(180deg, rgba(220, 202, 135, 0.025), transparent 40%),
+    #090907;
 }
 
 .footer::before {

@@ -23,6 +23,11 @@
 
 .content-page-copy {
   align-content: center;
+  padding: 28px;
+  border: var(--border-subtle);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.012));
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.2);
 }
 
 .content-page-copy-centered {
@@ -56,6 +61,10 @@
     grid-template-columns: minmax(0, 1fr) minmax(300px, 0.9fr);
     align-items: center;
     gap: 48px;
+  }
+
+  .content-page-copy {
+    padding: 40px;
   }
 
   .content-page-image-box {
